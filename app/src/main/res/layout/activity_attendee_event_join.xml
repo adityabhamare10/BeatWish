@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/container_attendee_event_join_page"
+        android:layout_width="match_parent"
+        android:layout_height="852dp"
+        android:background="@drawable/event_container_attendee_event_join_page">
+
+      <ImageView
+          android:id="@+id/image_rectangle1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="top|center_horizontal"
+          android:layout_marginTop="252dp"
+          android:layout_marginRight="0.5dp"
+          android:background="@drawable/logo"
+          android:scaleType="centerInside" />
+
+      <TextView
+          android:id="@+id/text_lets_start_jamming"
+          android:layout_width="wrap_content"
+          android:layout_height="81dp"
+          android:layout_gravity="top|left"
+          android:layout_marginLeft="22dp"
+          android:layout_marginTop="64dp"
+          android:gravity="left|top"
+          android:includeFontPadding="false"
+          android:lineHeight="38.73dp"
+          android:text="Let’s start \njamming"
+          android:textColor="#FFFFFFFF"
+          android:textSize="32dp" />
+
+      <TextView
+          android:id="@+id/text_choose_option_join_vibe"
+          android:layout_width="wrap_content"
+          android:layout_height="20dp"
+          android:layout_gravity="top|left"
+          android:layout_marginLeft="22dp"
+          android:layout_marginTop="154.5dp"
+          android:layout_marginBottom="-1.5dp"
+          android:gravity="left|center_vertical"
+          android:includeFontPadding="false"
+          android:maxLines="1"
+          android:singleLine="true"
+          android:text="choose your option, and join the vibe"
+          android:textColor="#FFFFFFFF"
+          android:textSize="20dp" />
+
+
+      <EditText
+          android:id="@+id/eventCode"
+          android:layout_width="299dp"
+          android:layout_height="40dp"
+          android:layout_gravity="top|center_horizontal"
+          android:layout_marginTop="521dp"
+          android:textColor="#FFFFFFFF"
+          android:layout_marginRight="1dp"
+          android:background="@drawable/event_image_rectangle2"
+          android:hint="Enter the Joining Code"
+          android:scaleType="centerInside"
+          android:textColorHint="#BAB1B1"
+          android:textSize="20dp" />
+
+      <ImageView
+          android:id="@+id/container_line"
+          android:layout_width="330dp"
+          android:layout_height="1.1dp"
+          android:layout_gravity="top|center_horizontal"
+          android:layout_marginTop="499dp"
+          android:layout_marginRight="0.5dp"
+          android:scaleType="centerInside"
+          android:src="@drawable/event_container_line" />
+
+      <ImageView
+          android:id="@+id/joinImage"
+          android:layout_width="153dp"
+          android:layout_height="40dp"
+          android:layout_gravity="top|center_horizontal"
+          android:layout_marginTop="578dp"
+          android:layout_marginRight="1dp"
+          android:background="@drawable/event_image_rectangle3"
+          android:scaleType="centerInside" />
+
+      <TextView
+          android:id="@+id/text_join"
+          android:layout_width="wrap_content"
+          android:layout_height="21dp"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="586dp"
+          android:layout_marginRight="1.5dp"
+          android:gravity="left|center_vertical"
+          android:includeFontPadding="false"
+          android:maxLines="1"
+          android:singleLine="true"
+          android:text="Join"
+          android:textColor="#FFFFFFFF"
+          android:textSize="16dp" />
+
+
+    </FrameLayout>
+  </FrameLayout>
+
+</ScrollView>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/container_home_screen"
+            android:layout_width="match_parent"
+            android:layout_height="852dp"
+            android:background="@drawable/container_home_screen">
+
+
+            <ImageView
+                android:id="@+id/image_rectangle"
+                android:layout_width="183dp"
+                android:layout_height="194dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="546dp"
+                android:background="@drawable/image_rectangle"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/attendee"
+                android:layout_width="153dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="692dp"
+                android:background="@drawable/image_rectangle1"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/text_attendee"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="695.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Attendee"
+                android:textColor="#FF000000"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/image_rectangle2"
+                android:layout_width="183dp"
+                android:layout_height="194dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="280dp"
+                android:background="@drawable/image_rectangle2"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/welcomeMsg"
+                android:layout_width="201dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="64dp"
+                android:gravity="center_horizontal|top"
+                android:includeFontPadding="false"
+                android:lineHeight="35.2dp"
+                android:text="Welcome to\nBeatWish"
+                android:textColor="#FFFFFFFF"
+                android:textSize="32dp" />
+
+            <ImageView
+                android:id="@+id/image_musician"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="284dp"
+                android:layout_marginRight="0.5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/image_musician" />
+
+            <ImageView
+                android:id="@+id/image_crowd"
+                android:layout_width="176dp"
+                android:layout_height="103dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="571dp"
+                android:layout_marginRight="0.5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/image_crowd" />
+
+            <TextView
+                android:id="@+id/text_select_description"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="224.5dp"
+                android:layout_marginBottom="-1.5dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Select what best DESCRIBES you"
+                android:textColor="#FFD9D9D9"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/artist"
+                android:layout_width="153dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="424dp"
+                android:background="@drawable/image_rectangle3"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/text_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="427.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Artist"
+                android:textColor="#FF000000"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/container_line"
+                android:layout_width="330dp"
+                android:layout_height="1.1dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="509dp"
+                android:layout_marginRight="0.5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/container_line" />
+
+
+            <ImageView
+                android:id="@+id/image_group"
+                android:layout_width="150dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="121dp"
+                android:layout_marginTop="136dp"
+                android:layout_marginRight="122dp"
+                android:layout_marginBottom="702dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/image_group" />
+        </FrameLayout>
+    </FrameLayout>
+
+</ScrollView>

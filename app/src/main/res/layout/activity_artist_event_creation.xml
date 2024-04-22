@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_artist_event_creation"
+    android:layout_width="match_parent"
+    android:layout_height="852dp"
+    android:background="@drawable/artist_event_creation_container_artist_event_creation">
+
+    <TextView
+        android:id="@+id/text_create_event"
+        android:layout_width="wrap_content"
+        android:layout_height="81dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="65dp"
+        android:layout_gravity="top|left"
+        android:gravity="left|top"
+        android:includeFontPadding="false"
+        android:lineHeight="38.73dp"
+        android:text="Let’s create your \nEvent"
+        android:textColor="#FFFFFFFF"
+        android:textSize="32dp" />
+
+    <TextView
+        android:id="@+id/text_set_up_show"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="191.5dp"
+        android:layout_marginBottom="-1.5dp"
+        android:layout_gravity="top|left"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Let’s help you set up your show"
+        android:textColor="#FFFFFFFF"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:id="@+id/createEvent"
+        android:layout_width="153dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="91dp"
+        android:layout_marginTop="790dp"
+        android:layout_gravity="top|center_horizontal"
+        android:background="@drawable/artist_event_creation_image_rectangle"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/text_create_button"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginLeft="90.5dp"
+        android:layout_marginTop="793dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Create"
+        android:textColor="#FF000000"
+        android:textSize="16dp" />
+
+    <FrameLayout
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="241dp"
+        android:layout_gravity="top|left">
+
+        <LinearLayout
+            android:id="@+id/container_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:gravity="left|center_vertical"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Artist's Name"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14dp" />
+
+
+            <EditText
+                android:id="@+id/nameOfArtist"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:layout_width="299dp"
+                android:layout_height="40dp"
+                android:background="@drawable/artist_event_creation_image_date_rectangle"
+                android:scaleType="centerInside" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="User Name"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14dp" />
+
+
+            <EditText
+                android:id="@+id/emailId"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:layout_width="299dp"
+                android:layout_height="40dp"
+                android:background="@drawable/artist_event_creation_image_date_rectangle"
+                android:scaleType="centerInside" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Date"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14dp" />
+
+
+            <EditText
+                android:id="@+id/eDate"
+                android:inputType="date"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:layout_width="299dp"
+                android:layout_height="40dp"
+                android:calendarTextColor="@color/black"
+                android:background="@drawable/artist_event_creation_image_date_rectangle"
+                android:scaleType="centerInside" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Time"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14dp" />
+
+
+            <EditText
+                android:id="@+id/eTime"
+                android:textColor="@color/white"
+                android:inputType="time"
+                android:layout_width="299dp"
+                android:layout_height="40dp"
+                android:background="@drawable/artist_event_creation_image_time_rectangle"
+                android:scaleType="centerInside" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/text_venue"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Venue"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/venue"
+                android:textColor="@color/white"
+                android:inputType="textMultiLine"
+                android:layout_width="299dp"
+                android:layout_height="40dp"
+                android:background="@drawable/artist_event_creation_image_venue_rectangle"
+                android:scaleType="centerInside" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/text_request_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Request fee per song"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14dp" />
+
+
+            <EditText
+                android:id="@+id/requestFee"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:layout_width="192dp"
+                android:layout_height="40dp"
+                android:background="@drawable/artist_event_creation_image_request_fee_rectangle"
+                android:scaleType="centerInside" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/text_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Duration (in minutes)"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/durationOfEvent"
+                android:inputType="time"
+                android:textColor="@color/white"
+                android:layout_width="192dp"
+                android:layout_height="40dp"
+                android:background="@drawable/artist_event_creation_image_duration_rectangle"
+                android:scaleType="centerInside" />
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/container_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="635dp"
+        android:layout_marginRight="34dp"
+        android:clipToPadding="false"
+        android:gravity="left|top"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
+    </FrameLayout>
+
+</ScrollView>

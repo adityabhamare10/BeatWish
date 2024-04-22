@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_requests_page"
+    android:layout_width="match_parent"
+    android:layout_height="852dp">
+
+    <FrameLayout
+        android:id="@+id/container_attendee_event_join_page"
+        android:layout_width="393dp"
+        android:layout_height="852dp"
+        android:layout_gravity="top|left"
+        android:background="@drawable/request_page_container_attendee_event_join_page">
+
+        <TextView
+            android:id="@+id/text_currently_jamming"
+            android:layout_width="wrap_content"
+            android:layout_height="79dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="64dp"
+            android:gravity="left|top"
+            android:includeFontPadding="false"
+            android:lineHeight="38.73dp"
+            android:text="Currently\nJamming in"
+            android:textColor="#FFFFFFFF"
+            android:textSize="32dp" />
+
+        <ImageView
+            android:id="@+id/container_line"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="499dp"
+            android:layout_marginRight="0.5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/container_home_screen" />
+
+        <TextView
+            android:id="@+id/text_your_requests"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="460.5dp"
+            android:layout_marginBottom="-0.5dp"
+            android:gravity="left|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Your requests"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18dp" />
+
+        <FrameLayout
+            android:id="@+id/container_group"
+            android:layout_width="330dp"
+            android:layout_height="225dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="173dp">
+
+            <ImageView
+                android:id="@+id/image_rectangle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/request_page_image_rectangle"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/eventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_gravity="top|left"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="18dp"
+                android:gravity="left|top"
+                android:includeFontPadding="false"
+                android:lineHeight="35.2dp"
+                android:text="Night Charade \nClub"
+                android:textColor="#FFFFFFFF"
+                android:textSize="32dp" />
+
+            <ImageView
+                android:id="@+id/image_sun"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginTop="62dp"
+                android:layout_marginRight="108dp"
+                android:layout_marginBottom="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/request_page_image_sun" />
+
+            <TextView
+                android:id="@+id/arName"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_gravity="top|left"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="92dp"
+                android:layout_marginBottom="-1dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="-Artist’s Name"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/locationVenue"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="192dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="xyz resort, Goa"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/image_clock_alt"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="204dp"
+                android:layout_marginTop="190dp"
+                android:layout_marginRight="106dp"
+                android:layout_marginBottom="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/request_page_image_clock_alt" />
+
+            <TextView
+                android:id="@+id/startTime"
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="190dp"
+                android:layout_marginRight="31dp"
+                android:layout_marginBottom="40dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="9:00~12:00"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14dp" />
+
+
+        </FrameLayout>
+
+
+        <ImageView
+            android:id="@+id/selectSongs"
+            android:layout_width="153dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="550dp"
+            android:background="@drawable/image_rectangle3"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/text_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="555dp"
+            android:layout_marginBottom="-0.5dp"
+            android:gravity="left|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Select Songs"
+            android:textColor="#FF000000"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/text_ending_in"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="297dp"
+            android:layout_marginTop="451.5dp"
+            android:layout_marginBottom="-0.5dp"
+            android:gravity="left|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Ending in"
+            android:textColor="#FFFF0000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/text_ending_time"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="305dp"
+            android:layout_marginTop="469.5dp"
+            android:layout_marginBottom="-0.5dp"
+            android:gravity="left|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="10:00"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18dp" />
+
+
+    </FrameLayout>
+</FrameLayout>

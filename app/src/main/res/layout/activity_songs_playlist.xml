@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SongsPlaylist"
+    android:background="@drawable/container_home_screen">
+
+    <EditText
+        android:id="@+id/songInput"
+        android:background="@color/white"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter song name" />
+
+    <Button
+        android:id="@+id/addSongButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_below="@id/songInput"
+        android:layout_alignParentEnd="true"
+        android:text="Add Song" />
+
+    <ListView
+
+        android:id="@+id/songList"
+        android:layout_width="350dp"
+        android:layout_marginStart="33dp"
+        android:layout_height="400dp"
+        android:layout_below="@id/addSongButton"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/submitDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:text="Submit"
+        android:layout_below="@id/songList"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="250dp"/>
+
+    <Button
+        android:id="@+id/uploadQr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:text="Upload QR"
+        android:layout_below="@id/songList"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="50dp"
+        />
+</RelativeLayout>

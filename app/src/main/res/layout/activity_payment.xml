@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_attendee_event_join_page"
+    android:layout_width="match_parent"
+    android:layout_height="852dp"
+    android:background="@drawable/event_container_attendee_event_join_page">
+
+    <ImageView
+        android:id="@+id/payBtn"
+        android:layout_width="198dp"
+        android:layout_height="225dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_marginTop="230dp"
+        android:layout_gravity="top|center_horizontal"
+        android:background="@drawable/event_image_rectangle1"
+        android:scaleType="centerInside" />
+
+
+
+    <ImageView
+        android:id="@+id/image_qr"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_marginTop="286dp"
+        android:layout_gravity="top|center_horizontal"
+        android:scaleType="centerInside"
+        android:src="@drawable/event_image_qr" />
+
+    <TextView
+        android:id="@+id/text_scan_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="437dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Scan a QR"
+        android:textColor="#FFFFFFFF"
+        android:textSize="18dp" />
+
+
+    <ImageView
+        android:id="@+id/image_rectangle3"
+        android:layout_width="153dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="560dp"
+        android:layout_gravity="top|center_horizontal"
+        android:background="@drawable/event_image_rectangle3"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/text_join"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginRight="1.5dp"
+        android:layout_marginTop="565dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Pay"
+        android:textStyle="bold"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20dp" />
+
+
+
+</FrameLayout>

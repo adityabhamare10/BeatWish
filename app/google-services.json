@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "957293341868",
+    "project_id": "beatwish-c913d",
+    "storage_bucket": "beatwish-c913d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957293341868:android:03d39669107b863d174309",
+        "android_client_info": {
+          "package_name": "com.hustler.beatwish"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDxgorQse7PJeUrJ3oEplrSgNNxyYNmq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
