@@ -24,3 +24,7 @@ Clone the repository.
 Set up Firebase for backend services.
 Build and run the Android application using Android Studio.
 Explore the features and functionalities of BeatWish.
+
+## Media
+![BeatWish](https://github.com/adityabhamare10/BeatWish/assets/108888187/7e5151fc-5210-4a29-9618-c6370331f1a2)
+
