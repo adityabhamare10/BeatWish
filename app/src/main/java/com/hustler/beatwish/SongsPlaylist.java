@@ -58,7 +58,7 @@ public class SongsPlaylist extends AppCompatActivity {
 
 
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Artist");
+        myRef = database.getReference("Songs");
 
         songInput = findViewById(R.id.songInput);
         songList = findViewById(R.id.songList);
@@ -102,16 +102,14 @@ public class SongsPlaylist extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                HashMap<String, Integer> childData;
-                childData = new HashMap<>();
+                HashMap<String, Integer> childData = new HashMap<>();
                 for(String element : songsList){
                     childData.put(element, 0);
                 }
-                myRef.child("Songs").setValue(childData);
+                myRef.setValue(childData);
                 Toast.makeText(SongsPlaylist.this, "Submitted!!", Toast.LENGTH_SHORT).show();
             }
         });
-
 
     }
 

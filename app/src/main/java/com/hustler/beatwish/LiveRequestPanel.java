@@ -1,6 +1,6 @@
 package com.hustler.beatwish;
 
-import static com.hustler.beatwish.ArtistEventCreation.eId;
+import static com.hustler.beatwish.ArtistEventCreation.emailId;
 
 import static com.hustler.beatwish.SelectActivity.maxKey;
 import static com.hustler.beatwish.SelectActivity.songsMap;
@@ -95,7 +95,7 @@ public class LiveRequestPanel extends AppCompatActivity {
 
 
 
-        myRef.child(eId).child("Name").addValueEventListener(new ValueEventListener() {
+        myRef.child(emailId).child("Name").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){

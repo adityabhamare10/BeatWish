@@ -38,36 +38,47 @@ public class AttendeeEventJoin extends AppCompatActivity {
         joinImage = findViewById(R.id.joinImage);
         eventCode = findViewById(R.id.eventCode);
 
+//        joinImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+
+
+
+//                String eventCodeStr = eventCode.getText().toString();
+
+//                myRef.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                        for (DataSnapshot childSnapshot : snapshot.getChildren()) {
+//                            String key = childSnapshot.getKey();
+//                            String userCode = childSnapshot.child("joincode").getValue(String.class);
+//                            String code = "abc-123";
+//                            if(userCode.equals(code)){
+//                                Intent i = new Intent(AttendeeEventJoin.this, SelectActivity.class);
+//                                startActivity(i);
+//                                return;
+//                            }
+//                        }
+//
+//                        Toast.makeText(AttendeeEventJoin.this, "Invalid Code", Toast.LENGTH_SHORT).show();
+//
+//                    }
+//
+//                });
+
+//            }
+//        });
+        String code = "abc-123";
         joinImage.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                String eventCodeStr = eventCode.getText().toString();
-
-                myRef.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        for (DataSnapshot childSnapshot : snapshot.getChildren()) {
-                            String key = childSnapshot.getKey();
-                            String userCode = childSnapshot.child("joincode").getValue(String.class);
-                            if(userCode.equals(eventCodeStr)){
-                                Intent i = new Intent(AttendeeEventJoin.this, SelectActivity.class);
-                                startActivity(i);
-                                return;
-                            }
-                        }
-
-                        Toast.makeText(AttendeeEventJoin.this, "Invalid Code", Toast.LENGTH_SHORT).show();
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-
-                });
-
+//                if(eventCode.equals(code)){
+                    Intent i = new Intent(AttendeeEventJoin.this, SelectActivity.class);
+                    startActivity(i);
+//                }else{
+//                    Toast.makeText(AttendeeEventJoin.this, "Invalid Code", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
 

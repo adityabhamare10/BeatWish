@@ -13,12 +13,13 @@
 
     <TextView
         android:id="@+id/countdownText"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="258dp"
         android:text="Event Begins In "
         android:textColor="#ffff"
         android:layout_marginStart="100dp"
+        android:gravity="center"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

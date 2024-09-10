@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,17 +24,19 @@ public class ArtistEventCreation extends AppCompatActivity {
 
     ImageView createEvent;
 
-    EditText nameOfArtist, eDate, eTime, venue, requestFee, eDuration, emailId;
+    EditText eArtist, eDate, eTime, eVenue, eRequestFee, eDuration, eEmail;
 
     FirebaseDatabase database;
     DatabaseReference myRef;
 
-    public static String eId;
+    public static String emailId;
     public static String eventDate;
     public static String eventTime;
     public static String eventVenue;
     public static String artistName;
-    public static Boolean contain=false;
+    public static String requestFees;
+    public static String eventDuration;
+//    public static Boolean contain =false;
 
 
     @Override
@@ -41,117 +44,83 @@ public class ArtistEventCreation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artist_event_creation);
 
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        // Initialize Firebase database reference
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Artist");
+        myRef = database.getReference("Artists");
 
+        // Initialize UI elements
         createEvent = findViewById(R.id.createEvent);
-        nameOfArtist = findViewById(R.id.nameOfArtist);
+        eArtist = findViewById(R.id.nameOfArtist);
         eDate = findViewById(R.id.eDate);
         eTime = findViewById(R.id.eTime);
-        venue = findViewById(R.id.venue);
-        requestFee = findViewById(R.id.requestFee);
+        eVenue = findViewById(R.id.venue);
+        eRequestFee = findViewById(R.id.requestFee);
         eDuration = findViewById(R.id.durationOfEvent);
-        emailId = findViewById(R.id.emailId);
-        String randomNmbr=getRandomString(6);
+        eEmail = findViewById(R.id.emailId);
 
+        String randomNum = getRandomString();  // Generate random code for event
 
         createEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                artistName = nameOfArtist.getText().toString().trim();
+                // Get values from input fields
+                artistName = eArtist.getText().toString().trim();
                 eventDate = eDate.getText().toString().trim();
                 eventTime = eTime.getText().toString().trim();
-                eventVenue = venue.getText().toString().trim();
-                String requestFees = requestFee.getText().toString().trim();
-                String eventDuration = eDuration.getText().toString().trim();
-                eId = emailId.getText().toString().trim();
+                eventVenue = eVenue.getText().toString().trim();
+                requestFees = eRequestFee.getText().toString().trim();
+                eventDuration = eDuration.getText().toString().trim();
+                emailId = eEmail.getText().toString().trim();
 
-                myRef.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        for (DataSnapshot childSnapshot : snapshot.getChildren()) {
-                            String key = childSnapshot.getKey();
-                             if(eId.equals(key)){
-
-                             }
-
-                        }
+                // Validate input fields
+                validateInput();
 
 
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-
-                    });
-
-
-
-                // Check if any field is empty
-                if (artistName.isEmpty() || eventDate.isEmpty() || eventTime.isEmpty() ||
-                        eventVenue.isEmpty() || requestFees.isEmpty() || eventDuration.isEmpty()) {
-                    Toast.makeText(ArtistEventCreation.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
-                    return; // Exit the onClick method
-                }
-
-                // Check date format (YYYY-DD-MM)
-                if (!isValidDateFormat(eventDate)) {
-                    Toast.makeText(ArtistEventCreation.this, "Invalid date format", Toast.LENGTH_SHORT).show();
-                    return; // Exit the onClick method
-                }
-
-                // Check time format (24-hour format)
-                if (!isValidTimeFormat(eventTime)) {
-                    Toast.makeText(ArtistEventCreation.this, "Invalid time format", Toast.LENGTH_SHORT).show();
-                    return; // Exit the onClick method
-                }
-
+                // Create a HashMap for the event data
                 HashMap<String, String> childMap = new HashMap<>();
-//                childMap.put("Id", eId);
                 childMap.put("Name", artistName);
                 childMap.put("Date", eventDate);
                 childMap.put("Time", eventTime);
                 childMap.put("Venue", eventVenue);
                 childMap.put("RequestFees", requestFees);
-                childMap.put("joincode",randomNmbr);
+                childMap.put("joincode", randomNum);
 
-                DatabaseReference artistRef = myRef.child(eId);
+                // Save the event data to Firebase
+                DatabaseReference artistRef = myRef.child(emailId);
+                artistRef.setValue(childMap);
+                System.out.println("Sent");
 
+                // Clear input fields after creating the event
+//                eArtist.setText("");
+//                eDate.setText("");
+//                eTime.setText("");
+//                eVenue.setText("");
+//                eRequestFee.setText("");
+//                eDuration.setText("");
 
-                    artistRef.setValue(childMap);
-
-                    nameOfArtist.setText("");
-                    eDate.setText("");
-                    eTime.setText("");
-                    venue.setText("");
-                    requestFee.setText("");
-                    eDuration.setText("");
-
-                    // All checks passed, proceed to switch activity
-                    Intent intent = new Intent(ArtistEventCreation.this, EventCountdown.class);
-                    // Pass data to the next activity if needed
-                    startActivity(intent);
-
-
-
-
-
-
-
-
-
-
-
-
+                // Start next activity
+                Intent intent = new Intent(ArtistEventCreation.this, EventCountdown.class);
+                startActivity(intent);
             }
         });
+    }
 
+
+    private void uploadToFirebase(){
+
+    }
+
+    private void validateInput(){
+        if (artistName.isEmpty() || eventDate.isEmpty() || eventTime.isEmpty() ||
+                eventVenue.isEmpty() || requestFees.isEmpty() || eventDuration.isEmpty()) {
+            Toast.makeText(ArtistEventCreation.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+        }
+        if (!isValidDateFormat(eventDate)) {
+            Toast.makeText(ArtistEventCreation.this, "Invalid date format", Toast.LENGTH_SHORT).show();
+        }
+        if (!isValidTimeFormat(eventTime)) {
+            Toast.makeText(ArtistEventCreation.this, "Invalid time format", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private boolean isValidDateFormat(String date) {
@@ -163,11 +132,11 @@ public class ArtistEventCreation extends AppCompatActivity {
         return time.matches("([01]?[0-9]|2[0-3]):[0-5][0-9]");
     }
 
-    public static String getRandomString(int length) {
+    public static String getRandomString() {
         StringBuilder sb = new StringBuilder();
         Random random = new Random();
         int charCount = 'z' - 'a' + 1 + 'Z' - 'A' + 1 + '9' - '0' + 1; // A-Z, a-z, 0-9
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < 6; i++) {
             int randomIndex = random.nextInt(charCount);
             char randomChar;
             if (randomIndex < 'Z' - 'A' + 1) {

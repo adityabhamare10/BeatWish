@@ -230,7 +230,6 @@
 
             <EditText
                 android:id="@+id/requestFee"
-                android:inputType="number"
                 android:textColor="@color/white"
                 android:layout_width="192dp"
                 android:layout_height="40dp"

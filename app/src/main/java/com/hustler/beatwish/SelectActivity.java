@@ -72,7 +72,6 @@ public class SelectActivity extends AppCompatActivity {
 //                        HashMap<String,Integer> songsMap = new HashMap<>();
 
 
-
                         for(DataSnapshot childSnapshot : snapshot.getChildren()){
                             String key = childSnapshot.getKey();
                             Integer value = childSnapshot.getValue(Integer.class);
