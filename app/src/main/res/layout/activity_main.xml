@@ -13,11 +13,23 @@
         android:layout_height="match_parent">
 
 
+
+
+
         <FrameLayout
             android:id="@+id/container_home_screen"
             android:layout_width="match_parent"
             android:layout_height="852dp"
             android:background="@drawable/container_home_screen">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:adSize="BANNER"
+                app:adUnitId = "ca-app-pub-8048594935916934/5493002503">
+            </com.google.android.gms.ads.AdView>
 
 
             <ImageView

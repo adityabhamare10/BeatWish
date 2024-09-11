@@ -51,6 +51,10 @@
             android:name=".MainActivity"
             android:exported="false"/>
 
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8048594935916934~2437823703"/>
+
     </application>
 
 </manifest>
